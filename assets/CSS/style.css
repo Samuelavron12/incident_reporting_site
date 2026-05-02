@@ -1,0 +1,560 @@
+/* ================= GLOBAL RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef1f5;
+    
+    
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar{
+    width:250px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#2f3542;
+}
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+    padding: 10px;
+    color: #fff;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px 25px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#2f405c;
+}
+
+/* ================= MAIN CONTENT ================= */
+/*.main{
+    margin-left:240px;
+    padding:40px;
+    width:calc(100% - 240px);
+    min-height:100vh;
+}*/
+
+/* MAIN CONTENT AREA FIX 
+.main{
+    margin-left:250px; 
+    padding:30px;
+    min-height:100vh;
+    background:#f4f6f9;
+    box-sizing:border-box;
+}  */
+
+.main{
+    margin-left:250px;
+    padding:18px;
+    width:calc(100% - 250px);
+    min-height:100vh;
+    overflow-x:hidden; /* prevents horizontal scroll */
+}
+
+h1{
+    color:#1f2a3c;
+    margin-bottom:25px;
+}
+
+/* ================= CARD / CONTAINERS ================= */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:100%;
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+
+/* ================= FORMS ================= */
+label{
+    font-weight:bold;
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+}
+
+input, textarea, select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+textarea{ height:120px; }
+
+/* BUTTONS */
+button{
+    margin-top:25px;
+    padding:12px 20px;
+    background:#1f2a3c;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{ background:#2f405c; }
+
+/* ================= MAP ================= */
+#map{
+    width:100%;
+    height:350px;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+/* ================= TABLE ================= */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+
+th, td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    text-align:left;
+}
+
+th{
+    background:#1f2a3c;
+    color:white;
+}
+
+/* ================= AUTH PAGES ================= */
+/* ===== AUTH PAGES ONLY ===== */
+
+.auth-page {
+    background: #eef2f6;
+    height: 100vh;
+}
+
+.auth-container {
+    width: 420px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: Arial;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.auth-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.auth-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+/* ===============================
+   ADMIN PANEL STYLING
+================================ */
+
+.admin-body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+}
+
+.admin-wrapper{
+    display:flex;
+}
+
+/* Sidebar */
+
+.admin-sidebar{
+    width:250px;
+    height:100vh;
+    background:#1e293b;
+    color:white;
+    position:fixed;
+    left:0;
+    top:0;
+    padding-top:20px;
+}
+
+.admin-sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.admin-sidebar a{
+    display:block;
+    color:white;
+    padding:15px 20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.admin-sidebar a:hover{
+    background:#334155;
+}
+
+/* Content area */
+
+.admin-content{
+    margin-left:250px;
+    padding:40px;
+    width:100%;
+}
+
+/* ADMIN DASHBOARD CARDS */
+
+/* ADMIN PAGE LAYOUT */
+body{
+    background:#f1f5f9;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* ADMIN CONTENT AREA */
+.admin-content{
+    margin-left:240px;
+    padding:30px;
+   
+    
+}
+
+/* DASHBOARD CARDS */
+/* DASHBOARD GRID */
+/* DASHBOARD GRID - 3 CARDS PER ROW */
+.dashboard-cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+    margin-top:15px;
+    align-items: center;
+    position: fixed;
+}
+
+.card{
+    padding:15px;
+    border-radius:8px;
+    color:#000;
+    min-width:0;
+    width:100%; /* important so grid controls width */
+}
+.card h2{
+    font-size:26px;        /* smaller number */
+    margin-bottom:5px;
+    color: #000;
+}
+
+.card p{
+    font-size:14px;
+}
+
+/* CARD COLORS */
+.users{ background:#6366f1; }
+.incidents{ background:#0ea5e9; }
+.pending{ background:#f59e0b; }
+.progress{ background:#3b82f6; }
+.resolved{ background:#22c55e; }
+.rejected{ background:#ef4444; }
+
+/* ADMIN TABLE */
+.admin-table{
+    width:83%;
+    border-collapse:collapse;
+    background:white;
+    margin-top:25px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.admin-table th{
+    background:#0f172a;
+    color:white;
+    padding:15px;
+    text-align:left;
+}
+
+.admin-table td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+/* STATUS COLORS */
+.status{
+    padding:6px 12px;
+    border-radius:6px;
+    font-size:14px;
+    color:white;
+}
+
+.status.pending{ background:#f59e0b; }
+.status.resolved{ background:#16a34a; }
+
+/* RESOLVE BUTTON */
+.resolve-btn{
+    background:#2563eb;
+    color:white;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+}
+.resolve-btn:hover{
+    background:#1d4ed8;
+}
+
+.status-select {
+    padding:6px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+.btn-view{
+    padding:6px 10px;
+    background:#2ecc71;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+/* INCIDENT DETAILS PAGE */
+.page-title{
+    margin-bottom:25px;
+    color:#0f172a;
+}
+
+.incident-card{
+    background:#fff;
+    padding:35px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    max-width:700px;
+}
+
+.detail-row{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:22px;
+    border-bottom:1px solid #eee;
+    padding-bottom:15px;
+}
+
+.label{
+    font-size:13px;
+    color:#64748b;
+    margin-bottom:6px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.value{
+    font-size:18px;
+    color:#0f172a;
+    line-height:1.6;
+}
+
+/* STATUS BADGE */
+.status-badge{
+    display:inline-block;
+    padding:6px 14px;
+    background:#facc15;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+/* USER STATUS BADGES */
+.status-user{
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    color:white;
+}
+
+/* different colors */
+.pending{
+    background:#f59e0b; 
+}
+.in-progress{
+    background:#3b82f6; 
+}
+.resolved{
+    background:#22c55e;
+}
+.rejected{
+    background:#ef4444;
+}
+
+
+/* =========================================
+   MOBILE USER SIDEBAR (FINAL FIX)
+========================================= */
+@media (max-width:768px){
+
+    /* hide sidebar by default */
+    .sidebar{
+        position:fixed;
+        top:0;
+        left:-100% !important;   /* FORCE hide */
+        width:90%;
+        height:100%;
+        z-index:9999;
+        transition:0.3s;
+    }
+
+    /* show when active */
+    .sidebar.active{
+        left:0 !important;
+    }
+
+    /* remove desktop spacing */
+    .main{
+        margin-left:0 !important;
+        width:100% !important;
+        padding:15px;
+    }
+
+    /* toggle button visible */
+    .menu-toggle{
+        display:block !important;
+        position:fixed;
+        top:15px;
+        left:15px;
+        background:#1f2a3c;
+        color:white;
+        border:none;
+        padding:10px 14px;
+        font-size:20px;
+        border-radius:6px;
+        z-index:10000;
+        cursor:pointer;
+    }
+}
+
+/* hide toggle button on desktop */
+.menu-toggle{
+    display:none;
+}
+
+/* USER TABLE MOBILE */
+@media (max-width:768px){
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+/* MAP MOBILE */
+@media (max-width:768px){
+    #map{
+        height:250px;
+    }
+}
+
+
+/*     media for tablet devices    */
+@media (max-width:1024px){
+
+    /* hide sidebar by default */
+    .sidebar{
+        position:fixed;
+        top:0;
+        left:-100% !important;   /* FORCE hide */
+        width:90%;
+        height:100%;
+        z-index:9999;
+        transition:0.3s;
+    }
+
+    /* show when active */
+    .sidebar.active{
+        left:0 !important;
+    }
+
+    /* remove desktop spacing */
+    .main{
+        margin-left:0 !important;
+        width:100% !important;
+        padding:15px;
+    }
+
+    /* toggle button visible */
+    .menu-toggle{
+        display:block !important;
+        position:fixed;
+        top:15px;
+        left:15px;
+        background:#1f2a3c;
+        color:white;
+        border:none;
+        padding:10px 14px;
+        font-size:20px;
+        border-radius:6px;
+        z-index:10000;
+        cursor:pointer;
+    }
+}
+
+/* hide toggle button on desktop */
+.menu-toggle{
+    display:none;
+}
+
+/* USER TABLE MOBILE */
+@media (max-width:768px){
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
+
+/* MAP MOBILE */
+@media (max-width:768px){
+    #map{
+        height:400px;
+    }
+}
+
