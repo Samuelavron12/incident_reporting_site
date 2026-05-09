@@ -1,3 +1,4 @@
+<?php require_once("../includes/auth_check.php"); ?>
 <?php 
 include("../includes/user-header.php");
 include("../config/database.php");
@@ -37,8 +38,9 @@ VALUES
 }
 ?>
 
-
-<h2>Report Traffic Incident</h2>
+<div class="hea">
+<h2>REPORT TRAFFIC INCIDENT</h2>
+</div>
 <div class="card">
 
 <?php if($message != "") echo "<p style='color:green;'>$message</p>"; ?>

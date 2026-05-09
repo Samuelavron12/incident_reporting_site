@@ -7,9 +7,7 @@
 }
 
 body{
-    background:#eef1f5;
-    
-    
+    background:#e2e3e5;
 }
 
 /* ================= SIDEBAR ================= */
@@ -422,6 +420,112 @@ body{
     background:#ef4444;
 }
 
+/*   hea element   */
+.hea{
+    font-weight: bold;
+    color: #000;
+   /* margin-top: 85px;  */
+
+}
+
+.top-navbar{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    background:#1f2937;
+    color:white;
+    z-index:1001;
+    padding:0 20px;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.nav-logo{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.menu-btn{
+    font-size:26px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+    padding: 20px;
+    margin: 10px;
+}
+@media(max-width:1024px){
+
+    .top-navbar{
+        display:flex;
+        height: 90px;
+    }
+
+    .sidebar{
+        position:fixed;
+        top:0;
+        left:-100%;
+        width: 95%;
+        height:100%;
+        z-index:1000;
+        transition:0.3s;
+    }
+
+    .sidebar.active{
+        left:0;
+    }
+
+    .page-content{
+        margin-left:0;
+       /* padding-top:100px;  */
+      
+    }
+    .main{
+        margin-left:0;
+        width:100%;
+        padding:15px;
+        padding-top:80px;   /* THIS FIXES EVERYTHING */
+    }
+    
+   /*  hea fix for all page header tag (H2)  */
+    .hea{
+        font-weight: bold;
+        color: #fff;
+        margin-top: 85px;  
+        background-color: #435572;
+        border-radius: 5px;
+        padding: 20px;
+    
+    }
+    .hea h1{
+        color: #fff;
+        text-transform: uppercase;
+    }
+    /*  authentication page*/
+    
+    .auth-page{
+        padding:10px;
+        align-items:flex-start;
+        padding-top:40px;
+    }
+
+    .auth-container{
+        max-width:100%;
+        padding:25px 18px;
+        border-radius:10px;
+    }
+
+    .auth-container h2{
+        font-size:18px;
+    }
+
+}
+
+
+
 
 /* =========================================
    MOBILE USER SIDEBAR (FINAL FIX)
@@ -433,7 +537,7 @@ body{
         position:fixed;
         top:0;
         left:-100% !important;   /* FORCE hide */
-        width:90%;
+       /* width:90%;  */
         height:100%;
         z-index:9999;
         transition:0.3s;
@@ -500,7 +604,7 @@ body{
         position:fixed;
         top:0;
         left:-100% !important;   /* FORCE hide */
-        width:90%;
+       /* width:90%;  */
         height:100%;
         z-index:9999;
         transition:0.3s;

@@ -1,3 +1,4 @@
+<?php require_once("../includes/admin-check.php"); ?>
 <?php 
 include("../includes/admin-header.php"); 
 include("sidebar.php");

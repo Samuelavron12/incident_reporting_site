@@ -38,6 +38,7 @@ if(isset($_POST['login'])){
         $error = "User not found!";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +62,7 @@ button{background:#28a745;color:#fff;border:none}
 <!----  login input section------>
 <?php if(isset($error)) echo "<p class='error'>$error</p>"; ?>
 
-<form method="POST">
+<form method="POST" >
 <input type="email" name="email" placeholder="Email" required>
 <input type="password" name="password" placeholder="Password" required>
 <button name="login">Login</button>

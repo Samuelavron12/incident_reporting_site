@@ -1,3 +1,4 @@
+
 <?php include("../includes/user-header.php"); ?>
 
 <?php
@@ -6,8 +7,7 @@ $lng = $_GET['lng'];
 ?>
 
 <h2>Incident Location</h2>
-<div id="map" style="height: 400px;"></div>
-
+<div id="map" style="height:400px;"></div>
 <script>
 var lat = <?php echo $lat; ?>;
 var lng = <?php echo $lng; ?>;

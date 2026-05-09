@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+/*document.addEventListener("DOMContentLoaded", function(){
 
     const toggleBtn = document.getElementById("menu-toggle");
     const sidebar = document.querySelector(".sidebar");
@@ -17,4 +17,18 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     });
 
+});
+*/
+
+const toggleBtn = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("sidebar");
+const links = document.querySelectorAll(".menu-link");
+
+toggleBtn.onclick = () => {
+    sidebar.classList.toggle("active");
+};
+links.forEach(link => {
+    link.onclick = () => {
+        sidebar.classList.remove("active");
+    }
 });

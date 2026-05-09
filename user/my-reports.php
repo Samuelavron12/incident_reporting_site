@@ -1,3 +1,4 @@
+<?php require_once("../includes/auth_check.php"); ?>
 <?php 
 include("../includes/user-header.php");
 include("../config/database.php");
@@ -12,9 +13,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 //$result = mysqli_query($conn,$sql);
 ?>
-
-<h2>My Reported Incidents</h2>
-
+<div class="hea">
+<h2>MY REPORTED INCIDENT</h2>
+</div>
 <table border="1" cellpadding="10" width="100%">
 <tr>
     <th>Image</th>
