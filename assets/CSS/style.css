@@ -32,6 +32,9 @@ body{
     color:white;
     text-decoration:none;
     transition:0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .sidebar a:hover{
@@ -214,6 +217,7 @@ th{
 .admin-sidebar h2{
     text-align:center;
     margin-bottom:30px;
+    
 }
 
 .admin-sidebar a{
@@ -222,6 +226,9 @@ th{
     padding:15px 20px;
     text-decoration:none;
     transition:0.3s;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .admin-sidebar a:hover{
@@ -230,8 +237,10 @@ th{
 
 /* Content area */
 
+
+/*
 .admin-content{
-    margin-left:250px;
+    margin-left:px;
     padding:40px;
     width:100%;
 }
@@ -246,9 +255,10 @@ body{
   
 }
 
-/* ADMIN CONTENT AREA */
-.admin-content{
-    margin-left:240px;
+/* ADMIN CONTENT AREA  */
+
+.mains{
+    margin-left:10px; 
     padding:30px;
    
     
@@ -273,33 +283,44 @@ body{
     min-width:0;
     width:100%; /* important so grid controls width */
 }
-.card h2{
-    font-size:26px;        /* smaller number */
+.card h3{
+    font-size:20px;  /* smaller number */
+    font-weight: bolder;
     margin-bottom:5px;
     color: #000;
 }
 
 .card p{
-    font-size:14px;
+    font-size:19px;
+    font-weight: bold;
 }
 
 /* CARD COLORS */
-.users{ background:#6366f1; }
-.incidents{ background:#0ea5e9; }
-.pending{ background:#f59e0b; }
-.progress{ background:#3b82f6; }
+.users{ background:#0c10f5; }
+.incidents{ background:#f3f02c; }
+.pending{ background:#a205eb; }
+.progress{ background:#03ec16; }
 .resolved{ background:#22c55e; }
-.rejected{ background:#ef4444; }
+.rejected{ background:#fd0606f8; }
 
 /* ADMIN TABLE */
-.admin-table{
-    width:83%;
+
+/*.admin-table{
+    width:80%;
     border-collapse:collapse;
     background:white;
     margin-top:25px;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+*/
+.admin-content{
+    margin-left:250px;            /* pushes content away from sidebar */
+    padding:30px 40px;
+    width:calc(100% - 250px);     /* prevents overflow */
+    min-height:100vh;
+    box-sizing:border-box;
 }
 
 .admin-table th{
@@ -426,6 +447,13 @@ body{
     color: #000;
    /* margin-top: 85px;  */
 
+}
+/*  for manage user  */
+.status-user.active{ 
+    background:#22c55e;
+ }
+.status-user.blocked{ 
+    background:#ef4444; 
 }
 
 .top-navbar{

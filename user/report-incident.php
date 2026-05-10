@@ -66,8 +66,8 @@ VALUES
     <label>Select Incident Location on Map</label>
 <div id="map" style="height:300px;"></div>
 
-<input type="hidden" name="latitude" id="latitude">
-<input type="hidden" name="longitude" id="longitude">
+<input type="hidden" name="latitude" id="latitude" required>
+<input type="hidden" name="longitude" id="longitude" required>
 
     <label>Upload Image</label>
     <input type="file" name="image">

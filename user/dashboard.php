@@ -104,6 +104,10 @@ $weekStmt->close();
     </div>
 
 </div>
-
+<footer>
+    <div class="copyright">
+        <p>&copy; 2026 AVRON Tech hub. All Right Reserved</p>
+    </div>
+</footer>
 </body>
 </html>

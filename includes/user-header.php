@@ -30,17 +30,11 @@ if($_SESSION['role'] != 'user'){
 </div>
 
 <div class="sidebar" id="sidebar">
-
     <h2>USER </h2>
     <a href="dashboard.php" class="menu-link">Dashboard</a>
-<a href="report-incident.php" class="menu-link">Report Incident</a>
-<a href="my-reports.php" class="menu-link">My Reports</a>
-<a href="../auth/logout.php" class="menu-link">Logout</a>
-
-    <!------<a href="../user/dashboard.php">Dashboard</a>
-    <a href="../user/report-incident.php">Report Incident</a>
-    <a href="../user/my-reports.php">My Reports</a>
-    <a href="../auth/logout.php">Logout</a>  ---->
+    <a href="report-incident.php" class="menu-link">Report Incident</a>
+    <a href="my-reports.php" class="menu-link">My Reports</a>
+    <a href="../auth/logout.php" class="menu-link">Logout</a>
 </div>
 
 <div class="main">

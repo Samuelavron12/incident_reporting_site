@@ -1,0 +1,17 @@
+.charts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:20px;
+}
+
+.chart-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.chart-card.full{
+    grid-column:span 2;
+}

@@ -24,7 +24,7 @@ $resolvedReports = $conn->query("SELECT COUNT(*) AS total FROM incidents WHERE s
 $rejectedReports = $conn->query("SELECT COUNT(*) AS total FROM incidents WHERE status='Rejected'")->fetch_assoc()['total'];
 
 ?>
-<div class="main">
+<div class="mains">
 <div class="admin-content">
     <h1>Dashboard Overview</h1>
 

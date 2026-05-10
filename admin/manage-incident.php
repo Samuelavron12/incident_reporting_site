@@ -10,15 +10,15 @@ include("../admin/sidebar.php");
 
     <table class="admin-table">
     <tr>
-   <th>ID</th>
-   <th>User</th>
-   <th>Title</th>
-   <th>Location</th>
-   <th>Status</th>
-   <th>Action</th>
-</tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
 
-        <?php
+    <?php
         $query = "SELECT incidents.*, users.fullname 
         FROM incidents 
         JOIN users ON incidents.user_id = users.id
