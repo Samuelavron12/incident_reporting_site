@@ -1,5 +1,15 @@
-<td>
-                <span class="status <?= strtolower($row['status']) ?>">
-                    <?= $row['status']; ?>
-                </span>
-            </td>
+<form method="POST">
+<select name="incident_id" required>
+<?php
+while($row = mysqli_fetch_assoc($incidents))
+{
+echo "<option value='{$row['id']}'>
+Incident #{$row['id']} - {$row['description']}
+</option>";
+}
+?>
+</select>
+
+<br><br>
+<button name="dispatch">Send Alert</button>
+</form>

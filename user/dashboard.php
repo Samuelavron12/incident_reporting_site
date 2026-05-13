@@ -54,6 +54,7 @@ $weekStmt->close();
 <div class="navbar" id="navbar" >
     <h2>SMART TRAFFIC SYSTEM</h2>
     <span>Welcome, <?php echo $_SESSION['fullname'] ?></span>
+    
    <!----nav links ------->
     <div id="sidebars">
         <ul>
@@ -88,7 +89,7 @@ $weekStmt->close();
         <div class="hero-overlay"></div>
 
         <div class="hero-text">
-            <h1>Welcome to Smart Traffic Incident System</h1>
+            <h1>Welcome, to Smart Traffic Incident System</h1>
             <p>Report incidents • Track safety • Get emergency help fast</p>
         </div>
 
