@@ -54,6 +54,7 @@ $weekStmt->close();
 <div class="navbar" id="navbar" >
     <h2>SMART TRAFFIC SYSTEM</h2>
     <span>Welcome, <?php echo $_SESSION['fullname'] ?></span>
+   <!----nav links ------->
     <div id="sidebars">
         <ul>
             <li><a href="#home" class="menu-link">Home</a></li>

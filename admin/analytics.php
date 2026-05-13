@@ -69,7 +69,6 @@ while($row = $monthQuery->fetch_assoc()){
                 <h3>Reports Per Month</h3>
                 <canvas id="monthChart"></canvas>
             </div>
-
         </div>
     </div>
     
@@ -119,7 +118,7 @@ while($row = $monthQuery->fetch_assoc()){
                 datasets: [{
                     label: 'Reports',
                     data: monthData,
-                    borderColor: '#f70808',
+                    borderColor: '#2f00ff',
                     fill: false
                 }]
             }
