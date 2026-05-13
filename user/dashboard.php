@@ -34,64 +34,97 @@ $weekStmt->fetch();
 $weekStmt->close();
 
 ?>
-
+<!----- html code for the dashboard ----->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/CSS/dashboards.css">
     <title>User Dashboard</title>
-    <link rel="stylesheet" href="../assets/CSS/dashboard.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
+<!-- NAVBAR ---->
+<div class="top-navbar">
+    <button id="menu-toggle" class="menu-btn">☰</button>
     <h2>SMART TRAFFIC SYSTEM</h2>
-    <div>
-        <span>Welcome, <?php echo $_SESSION['fullname'] ?></span>
-        <a href="../auth/logout.php" class="logout">Logout</a>
-    </div>
 </div>
-
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-text">
-        <h1>Help Keep Roads Safe 🚗</h1>
-        <p>Report accidents, traffic jams, broken traffic lights and help your city move better.</p>
-        <a href="report-incident.php" class="main-btn">Report Traffic Incident!!</a>
-    </div>
-</section>
-
-<!-- QUICK ACTION CARDS -->
-<section class="cards">
-    <div class="card">
-        <h3>📝 Report Incident</h3>
-        <p>Spotted an accident or traffic jam? Report it instantly.</p>
-        <a href="report-incident.php">Report Now </a>
-    </div>
-
-    <div class="card">
-        <h3>📍 View My Reports</h3>
-        <p>Track incidents you have submitted.</p>
-        <a href="my-reports.php">View Reports </a>
+<div class="navbar" id="navbar" >
+    <h2>SMART TRAFFIC SYSTEM</h2>
+    <span>Welcome, <?php echo $_SESSION['fullname'] ?></span>
+    <div id="sidebars">
+        <ul>
+            <li><a href="#home" class="menu-link">Home</a></li>
+            <li><a href="#about" class="menu-link">About</a></li>
+            <li><a href="#works"class="menu-link" >Works</a></li>
+           <li> <a href="../auth/logout.php" class="logout"class="menu-link" >Logout</a></li>
+        </ul>  
     </div>
     
+</div>
 
-</section>
 
-<!-- INFO SECTION -->
-<section class="info">
-    <h2>Traffic Safety Tips</h2>
-    <div class="tips">
-        <div class="tip">🚦 Always obey traffic lights</div>
-        <div class="tip">📱 Avoid phone while driving</div>
-        <div class="tip">🛑 Maintain safe distance</div>
-        <div class="tip">🚑 Report emergencies quickly</div>
+<!------ sections ------>
+
+<section id="home" class="home">
+<div class="dashboard-hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image:url('../assets/hold1.webp')"></div>
+            <div class="slide" style="background-image:url('../assets/im1.png')"></div>
+            <div class="slide" style="background-image:url('../assets/im2.png')"></div>
+            <div class="slide" style="background-image:url('../assets/hold2.avif')"></div>
+            <div class="slide" style="background-image:url('../assets/hold3.jpg')"></div>
+            <div class="slide" style="background-image:url('../assets/acc.jpg')"></div>
+            <div class="slide" style="background-image:url('../assets/hold5.jpg')"></div>
+            <div class="slide" style="background-image:url('../assets/acc4.jpg')"></div>
+            <div class="slide" style="background-image:url('../assets/hold6.jpg')"></div>
+            <div class="slide" style="background-image:url('../assets/hol4.webp')"></div>
+            <div class="slide" style="background-image:url('../assets/acc.jpg')"></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-text">
+            <h1>Welcome to Smart Traffic Incident System</h1>
+            <p>Report incidents • Track safety • Get emergency help fast</p>
+        </div>
+
     </div>
-</section>
 
-<div class="user-stats">
+</section>
+<section id="about" class="about">
+    <!-- INFO SECTION -->
+    <section class="info">
+        <h2>Traffic Safety Tips</h2>
+        <div class="tips">
+            <div class="tip">🚦 Always obey traffic lights</div>
+            <div class="tip">📱 Avoid phone while driving</div>
+            <div class="tip">🛑 Maintain safe distance</div>
+            <div class="tip">🚑 Report emergencies quickly</div>
+        </div>
+    </section>
+
+    <!-- QUICK ACTION CARDS -->
+    <section class="cards">
+        <div class="card">
+            <h3>📝 Report Incident</h3>
+            <p>Spotted an accident or traffic jam? Report it instantly.</p>
+            <a href="report-incident.php">Report Now </a>
+        </div>
+
+        <div class="card">
+            <h3>📍 View My Reports</h3>
+            <p>Track incidents you have submitted.</p>
+            <a href="my-reports.php">View Reports </a>
+        </div>
+        
+
+    </section>
+</section>
+<section id="works" class="works">
+    <div class="user-stats">
 
     <div class="stat-card">
         <h3><?php echo $totalReports; ?></h3>
@@ -103,11 +136,45 @@ $weekStmt->close();
         <p>Reports This Week</p>
     </div>
 
-</div>
+    </div>
+</section>
+<!---- copyright section------->
 <footer>
     <div class="copyright">
         <p>&copy; 2026 AVRON Tech hub. All Right Reserved</p>
     </div>
 </footer>
+
+<!-----script---->
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function changeSlide(){
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
+
+setInterval(changeSlide, 5000); // change every 5 seconds
+</script>
+<script>
+const toggleBtn = document.getElementById("menu-toggle");
+const sidebar = document.getElementById("navbar");
+const links = document.querySelectorAll(".menu-link");
+
+toggleBtn.onclick = () => {
+    sidebar.classList.toggle("active");
+};
+links.forEach(link => {
+    link.onclick = () => {
+        sidebar.classList.remove("active");
+    }
+});
+
+
+</script>
 </body>
 </html>
+
+

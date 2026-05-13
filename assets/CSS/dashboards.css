@@ -1,0 +1,570 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    padding:20px 60px;
+    background:#2f3542;
+    z-index:1000;
+}
+.navbar .logo{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar ul {
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.navbar a {
+    font-size: 16px;
+    color:#fff;
+    font-weight: bold;
+    text-decoration:none;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: #2600ff;
+    font-weight: bolder;
+}
+.navbar h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+span{
+    display: inline-block;
+    margin-right: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    text-transform: capitalize;
+ }
+/* sections */
+
+ .home {
+    height:100vh;
+    background: #2f3542;
+  /*  display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px;
+    */
+}
+
+ 
+/* ===== DASHBOARD BACKGROUND SLIDER ===== */
+
+.dashboard-hero{
+    position:relative;
+    height: 100vh;
+    overflow:hidden;
+    margin-bottom:30px;
+}
+
+/* Slides container */
+.hero-slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+/* Each slide */
+.slide{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 3s ease-in-out;
+}
+
+/* Active slide */
+.slide.active{
+    opacity:1;
+}
+
+/* Dark overlay 
+.hero-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgb(rgb(104, 114, 124)); 
+    z-index:1;
+}
+
+/* Text on top */
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    
+    z-index:2;
+    /*animation:textFade 6s infinite;*/
+}
+
+.hero-text h1{
+    font-size:50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom:10px;
+}
+
+.hero-text p{
+    font-size:20px;
+    font-weight: bold;
+}
+
+/* Text fade animation 
+@keyframes textFade{
+    0%{opacity:0;}
+    20%{opacity:1;}
+    80%{opacity:1;}
+    100%{opacity:0;}
+}  */
+
+.about {
+    height:100vh;
+    background: #64676d;
+    padding:150px 50px;
+   
+  /*  display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px;
+    */
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    gap:20px;
+    padding:40px;
+    margin-top: 50px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    flex:1;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(92, 1, 1, 0.1);
+}
+.card:hover{
+    padding: 50px;
+}
+.card h3{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 1.7;
+}
+.card p{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+.card a{
+    text-decoration:none;
+    color:#2f06c4;
+    font-weight:bold;
+    line-height: 1.7;
+}
+
+/* INFO SECTION */
+.info{
+    background:white;
+    margin:20x;
+    padding:30px;
+    border-radius:10px;
+   
+   
+}
+
+.tips{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.tip{
+    background:#e9f2ff;
+    padding:15px;
+    border-radius:8px;
+    flex:1;
+    text-align:center;
+}
+
+/* for the  third section */
+
+.works {
+    height:100vh;
+    background: #3e3f41;
+    padding:150px 50px;
+   
+  /*  display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px;
+    */
+}
+
+/* section for user stats */
+
+.user-stats{
+    min-height:60vh;
+    display:flex;
+    justify-content:center;   /* horizontal center */
+    align-items:center;  
+    gap: 40px; 
+   /* display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    max-width:1000px;
+    margin:auto;
+    justify-content: center;
+
+  /*  display:flex;
+    gap:70px;
+    padding:40px 30px;
+    margin-left: 65vh;
+   
+   /* display:flex;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    margin-bottom:30px;
+    */
+}
+
+.stat-card{
+    background:#2f3542;
+    padding:50px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.stat-card h3{
+    font-size: 35px;
+    color:#fff;
+    font-weight: bold;
+}
+.stat-card  p{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+/* top navbar for smaller screen workings */
+
+.top-navbar{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    background:#2f3542;
+    color:white;
+    z-index:1001;
+    padding:0 20px;
+    align-items:center;
+    justify-content:space-between;
+}
+.menu-btn{
+    position: absolute;
+   
+    right: 20px;
+    font-size:26px;
+    background:none;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* footer = zone  */
+footer{
+    background-color: #2f3542;
+    color: #fff;
+    padding: 20px 20px;
+}
+.copyright{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* media query for all devices */
+
+/* ============================= */
+/* TABLET DEVICES (iPad etc)     */
+/* ============================= */
+
+@media (max-width:1024px){
+
+/* Navbar padding smaller */
+    .top-navbar{
+        display:flex;
+        height: 70px;
+    }
+
+    .navbar{
+        position:fixed;
+        top:0;
+        left:-100%;
+        width: 90%;
+        height:100vh;
+        display: flex;
+        justify-content: center; 
+       /* align-items: center;  */
+        z-index:1000;
+        transition:0.3s;
+    }
+    .navbar h2{
+     display: none;
+        
+    }
+    span{
+        display: none;
+    }
+    .navbar.active{
+        left:0;
+    }
+    .navbar ul{
+       display: flex;
+       flex-direction: column;
+       gap: 70px;
+
+       padding: 20px;
+       margin: 0;
+       margin-top: 40px;
+      
+    }
+    .navbar ul li a{
+        text-transform: uppercase;
+        font-size: 20px;
+       text-align: center;
+    }
+    .menu-btn{
+        right: 0;
+
+    }
+
+
+    /* Hero text smaller */
+    .hero-text h1{
+        font-size:30px;
+        font-weight: bold;
+    }
+    .hero-text p{
+        font-size:18px;
+        font-weight: bold;
+    }
+
+    /* Cards become 2 columns */
+    .cards{
+        flex-wrap:wrap;
+    }
+    .card{
+        flex: 1 1 45%;
+    }
+
+    /* Tips become 2 columns */
+    .tips{
+        flex-wrap:wrap;
+    }
+    .tip{
+        flex: 1 1 45%;
+    }
+
+    /* User stats smaller padding */
+    .stat-card{
+        padding:40px;
+    }
+
+    .user-stats{
+        gap:25px;
+    } 
+
+    .cards{
+        display:flex;
+        gap:20px;
+        padding:30px;
+        margin-top: 40px;
+    }
+    
+    .card{
+        background:white;
+        padding:30px;
+        flex:1;
+        border-radius:10px;
+        box-shadow:0 3px 10px rgba(92, 1, 1, 0.1);
+    }
+    .card:hover{
+        padding: 30px;
+    }
+    .card h3{
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+    .card p{
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+    .card a{
+        text-decoration:none;
+        color:#2f06c4;
+        font-weight:bold;
+        line-height: 1.7;
+    }
+    
+    /* INFO SECTION */
+    .info{
+        background:white;
+        margin:20x;
+        padding:20px;
+        border-radius:10px;
+       
+       
+    }
+    
+    .tips{
+        display:flex;
+        gap:20px;
+        margin-top:20px;
+    }
+    
+    .tip{
+        background:#e9f2ff;
+        padding:15px;
+        border-radius:8px;
+        flex:1;
+        text-align:center;
+    }
+}
+
+/* ============================= */
+/* MOBILE DEVICES                */
+/* ============================= */
+
+@media (max-width:768px){
+    /* Hero text resizing */
+    .hero-text h1{
+        font-size:25px;
+        font-weight: bold;
+    }
+    .hero-text p{
+        font-size:14px;
+        font-weight: bold;
+    }
+
+    /* Sections padding reduced */
+    .about, .works{
+        padding:100px 20px;
+    }
+
+    /* Cards → ONE COLUMN */
+    .cards{
+        flex-direction:column;
+        padding:20px;
+    }
+    .card{
+        flex:1;
+    }
+
+    /* Tips → ONE COLUMN */
+    .tips{
+        flex-direction:column;
+    }
+
+    /* USER STATS → ONE COLUMN */
+    .user-stats{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .stat-card{
+        width:90%;
+        padding:30px;
+    }
+
+    /* Reduce big headings */
+    .stat-card h3{
+        font-size:28px;
+    }
+    .stat-card p{
+        font-size:14px;
+    }
+    .menu-toggle{
+        display:block !important;
+        position:fixed;
+        top:15px;
+        left:70px;
+        background:#1f2a3c;
+        color:white;
+        border:none;
+        padding:10px 14px;
+        font-size:20px;
+        border-radius:6px;
+        z-index:10000;
+        cursor:pointer;
+    }
+
+    }
+    .menu-toggle{
+        display:none;
+    }
+
+/* ============================= */
+/* SMALL PHONES                  */
+/* ============================= */
+
+@media (max-width:480px){
+
+.hero-text h1{
+    font-size:18px;
+}
+.hero-text p{
+    font-size:13px;
+}
+
+.stat-card{
+    padding:25px;
+}
+
+.navbar h2{
+    font-size:16px;
+}
+
+span{
+    margin-right:15px;
+    font-size:13px;
+}
+
+}
