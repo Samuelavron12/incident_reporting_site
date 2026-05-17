@@ -73,5 +73,19 @@ $incident = $result->fetch_assoc();
             <span class="label">Status</span>
             <span class="value status-badge"><?= $incident['status']; ?></span>
         </div>
+        <?php if($incident['status'] != "Resolved"): ?>
+
+        <form action="../admin/resolve-incident.php" method="POST" style="margin-top:25px;">
+            <input type="hidden" name="incident_id" value="<?= $incident['id']; ?>">
+            <button class="resolve-btn" style="padding:12px 25px;font-size:16px;">
+                Mark as Resolved
+            </button>
+        </form>
+
+        <?php else: ?>
+        <p style="color:green;font-weight:bold;margin-top:20px;">
+            ✔ This incident has been resolved
+        </p>
+        <?php endif; ?>
 </body>
 </html>

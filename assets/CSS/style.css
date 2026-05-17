@@ -186,6 +186,60 @@ th{
     border: none;
     border-radius: 6px;
 }
+#trafficMap{
+    height: 500px;
+    border-radius: 12px;
+    margin-top:20px;
+}
+.cardss{
+    background: #fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+
+.route-box{
+    background: transparent;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.route-box input{
+    width:60%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.route-box button{
+    padding:10px 18px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-left:10px;
+}
+
+#routeInfo{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.notification-card{
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-left:6px solid rgb(2, 240, 2);
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
 
 /* ===============================
    ADMIN PANEL STYLING
@@ -485,8 +539,39 @@ body{
     padding: 20px;
     margin: 10px;
 }
+.dashboard-content {
+    padding: 20px;
+      /* pushes page below fixed navbar */
+  /*  min-height: 100vh;  /* makes page fill screen even with few notifications */
+}
+/* ADMIN ALERT SUCCESS */
+.alert-success{
+    background:#f0fff4;
+    border-left:6px solid #28a745;
+    padding:15px 20px;
+    margin:20px 0;
+    border-radius:6px;
+    color:#155724;
+    font-weight:600;
+}
+
+/* ADMIN ALERT ERROR */
+.alert-error{
+    background:#fff5f5;
+    border-left:6px solid #dc3545;
+    padding:15px 20px;
+    margin:20px 0;
+    border-radius:6px;
+    color:#721c24;
+    font-weight:600;
+}
+
 @media(max-width:1024px){
 
+
+    .dashboard-content {
+        margin-top: 60px;
+    }
     .top-navbar{
         display:flex;
         height: 90px;
@@ -625,9 +710,9 @@ body{
 
 
 /*     media for tablet devices    */
-@media (max-width:1024px){
 
-    /* hide sidebar by default */
+@media (max-width:1024px){
+  /* hide sidebar by default */
     .sidebar{
         position:fixed;
         top:0;

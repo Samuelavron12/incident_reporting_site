@@ -1,6 +1,6 @@
 <?php require_once("../includes/admin-check.php"); ?>
 <?php
-session_start();
+//session_start();
 include("../config/database.php");
 
 // check admin login

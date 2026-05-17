@@ -1,4 +1,4 @@
-
+<?php require_once("../includes/user-check.php"); ?>
 <?php include("../includes/user-header.php"); ?>
 
 <?php

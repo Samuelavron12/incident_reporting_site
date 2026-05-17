@@ -1,3 +1,4 @@
+<?php require_once("../includes/admin-check.php"); ?>
 <?php
 include("../config/database.php");
 

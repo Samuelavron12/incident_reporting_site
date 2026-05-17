@@ -20,6 +20,8 @@
     
     <a href="analytics.php">Analytics</a>
     <a href="manage-user.php">Manage Users</a>
+    <a href="send-notification.php">send notification</a>
+
     <a href="reports.php">Reports</a>
     <a href="../auth/logout.php">Logout</a>
 </div>

@@ -1,3 +1,4 @@
+<?php require_once("../includes/user-check.php"); ?>
 <?php
 $lat = $_GET['lat'];
 $lng = $_GET['lng'];

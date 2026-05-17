@@ -1,7 +1,8 @@
-<?php require_once("../includes/auth_check.php"); ?>
+<?php require_once("../includes/user-check.php"); ?>
 <?php 
 include("../includes/user-header.php");
 include("../config/database.php");
+
 
 $message = "";
 
@@ -56,7 +57,8 @@ VALUES
     <label>Incident Type</label>
     <select name="incident_type" required>
         <option>Accident</option>
-        <option>Traffic Jam</option>
+      <!---
+        <option>Traffic Jam</option>  --->
         <option>Road Block</option>
         <option>Vehicle Breakdown</option>
         <option>Other</option>
@@ -64,7 +66,7 @@ VALUES
 
     <label>Location</label>
     <label>Select Incident Location on Map</label>
-<div id="map" style="height:300px;"></div>
+<div id="map" style="height:500px;"></div>
 
 <input type="hidden" name="latitude" id="latitude" required>
 <input type="hidden" name="longitude" id="longitude" required>

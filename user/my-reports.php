@@ -1,4 +1,4 @@
-<?php require_once("../includes/auth_check.php"); ?>
+<?php require_once("../includes/user-check.php"); ?>
 <?php 
 include("../includes/user-header.php");
 include("../config/database.php");

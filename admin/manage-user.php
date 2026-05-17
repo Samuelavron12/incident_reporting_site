@@ -1,13 +1,14 @@
+
 <?php
-session_start();
 require_once "../config/database.php";
 require_once "../includes/admin-header.php";
+
+//session_start();
 
 /* GET ALL USERS */
 $result = $conn->query("SELECT id, fullname, email, created_at, status FROM users ORDER BY id DESC");
 ?>
 
-<?php include "../includes/admin-header.php"; ?>
 
 <div class="admin-content">
     <h1>Manage Users</h1>

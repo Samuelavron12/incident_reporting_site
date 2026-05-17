@@ -1,7 +1,5 @@
-<?php
-/*include("../config/database.php");
-include("../config/database.php");*/
 
+<?php
 require_once "../config/database.php";
 require_once "../includes/admin-header.php";
 
@@ -20,6 +18,7 @@ if(isset($_POST['add_service']))
     mysqli_query($conn,$sql);
 }
 ?>
+<?php require_once("../includes/admin-check.php"); ?>
 
 
 <!DOCTYPE html>
@@ -85,20 +84,4 @@ if(isset($_POST['add_service']))
 </div>
 </body>
 </html>
-<?php
-/*$result = mysqli_query($conn,"SELECT * FROM emergency_services");
 
-while($row = mysqli_fetch_assoc($result))
-{
-echo "<tr>
-<td>{$row['service_name']}</td>
-<td>{$row['service_type']}</td>
-<td>{$row['phone']}</td>
-<td>{$row['email']}</td>
-<td>{$row['location']}</td>
-<td>
-<a href='dispatch.php?id={$row['id']}'>Dispatch Incident</a>
-</td>
-</tr>";
-}
-?> */

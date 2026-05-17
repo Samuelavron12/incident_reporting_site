@@ -1,4 +1,4 @@
-
+<?php require_once("../includes/user-check.php"); ?>
 <?php
 session_start();
 require_once "../config/database.php";

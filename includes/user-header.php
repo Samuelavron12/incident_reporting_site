@@ -1,5 +1,7 @@
+
 <?php
-session_start();
+require_once "../includes/user-check.php";
+//session_start();
 
 if(!isset($_SESSION['user_id'])){
     header("Location: ../auth/login.php");
@@ -33,7 +35,9 @@ if($_SESSION['role'] != 'user'){
     <h2>USER </h2>
     <a href="dashboard.php" class="menu-link">Dashboard</a>
     <a href="report-incident.php" class="menu-link">Report Incident</a>
+    <a href="traffic-jam.php" class="menu-link">view traffic jam</a>
     <a href="my-reports.php" class="menu-link">My Reports</a>
+    <a href="notification.php" class="menu-link">alerts</a>
     <a href="../auth/logout.php" class="menu-link">Logout</a>
 </div>
 

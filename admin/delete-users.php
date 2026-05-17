@@ -1,5 +1,6 @@
+<?php require_once("../includes/admin-check.php"); ?>
 <?php
-session_start();
+//session_start();
 require_once "../config/database.php";
 require_once "../includes/admin-header.php";
 requireAdmin();
