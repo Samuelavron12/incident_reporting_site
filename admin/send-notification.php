@@ -1,20 +1,6 @@
 <?php
 include("../config/database.php");
 include("../includes/admin-header.php");
-
-/*if(isset($_POST['send']))
-{
-    $user_id = $_POST['user_id'];
-    $title = $_POST['title'];
-    $message = $_POST['message'];
-
-    mysqli_query($conn,
-    "INSERT INTO notifications (user_id,title,message,type)
-     VALUES ('$user_id','$title','$message','admin')");
-
-    echo "<h3 style='color:green'>Notification Sent!</h3>"; 
-}
-*/
 $success = "";
 $error = "";
 
