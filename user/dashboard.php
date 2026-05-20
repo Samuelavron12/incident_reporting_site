@@ -67,7 +67,7 @@ $weekStmt->close();
     
 </div>
 
-
+<!------  images for the image slider action------->
 <!------ sections ------>
 
 <section id="home" class="home">
