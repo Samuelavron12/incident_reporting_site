@@ -25,7 +25,7 @@ if($_SESSION['role'] != 'user'){
 </head>
 
 <body class="dashboard-page">
-<!-- TOP NAVBAR -->
+<!-- TOP NAVBAR --->
 <div class="top-navbar">
     <div class="nav-logo">INCIDENT REPORTING SYSTEM</div>
     <button id="menu-toggle" class="menu-btn">☰</button>
@@ -33,7 +33,7 @@ if($_SESSION['role'] != 'user'){
 
 <div class="sidebar" id="sidebar">
     <h2>USER </h2>
-    <a href="dashboard.php" class="menu-link">Dashboard</a>
+    <a href="index.php" class="menu-link">Dashboard</a>
     <a href="report-incident.php" class="menu-link">Report Incident</a>
     <a href="traffic-jam.php" class="menu-link">view traffic jam</a>
     <a href="my-reports.php" class="menu-link">My Reports</a>

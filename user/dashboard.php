@@ -50,12 +50,12 @@ $weekStmt->close();
 <div class="top-navbar">
     <button id="menu-toggle" class="menu-btn">☰</button>
     <h2>SMART TRAFFIC SYSTEM</h2>
-</div>
+</div> <!----
 <div class="navbar" id="navbar" >
     <h2>SMART TRAFFIC SYSTEM</h2>
     <span>Welcome, <?php echo $_SESSION['fullname'] ?></span>
     
-   <!----nav links ------->
+   
     <div id="sidebars">
         <ul>
             <li><a href="#home" class="menu-link">Home</a></li>
@@ -63,7 +63,7 @@ $weekStmt->close();
             <li><a href="#works"class="menu-link" >Works</a></li>
            <li> <a href="../auth/logout.php" class="logout"class="menu-link" >Logout</a></li>
         </ul>  
-    </div>
+    </div> --->
     
 </div>
 
@@ -71,7 +71,7 @@ $weekStmt->close();
 <!------ sections ------>
 
 <section id="home" class="home">
-<div class="dashboard-hero">
+    <div class="dashboard-hero">
         <div class="hero-slider">
             <div class="slide active" style="background-image:url('../assets/hold1.webp')"></div>
             <div class="slide" style="background-image:url('../assets/im1.png')"></div>
@@ -92,6 +92,12 @@ $weekStmt->close();
             <h1>Welcome, to Smart Traffic Incident System</h1>
             <p>Report incidents • Track safety • Get emergency help fast</p>
         </div>
+        <div class="tips">
+            <div class="tip">🚦 Always obey traffic lights</div>
+            <div class="tip">📱 Avoid phone while driving</div>
+            <div class="tip">🛑 Maintain safe distance</div>
+            <div class="tip">🚑 Report emergencies quickly</div>
+        </div>
 
     </div>
 
@@ -100,12 +106,12 @@ $weekStmt->close();
     <!-- INFO SECTION -->
     <section class="info">
         <h2>Traffic Safety Tips</h2>
-        <div class="tips">
+       <!--- <div class="tips">
             <div class="tip">🚦 Always obey traffic lights</div>
             <div class="tip">📱 Avoid phone while driving</div>
             <div class="tip">🛑 Maintain safe distance</div>
             <div class="tip">🚑 Report emergencies quickly</div>
-        </div>
+        </div> ---->
     </section>
 
     <!-- QUICK ACTION CARDS -->
