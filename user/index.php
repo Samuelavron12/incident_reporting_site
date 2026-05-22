@@ -59,14 +59,17 @@
 
         <!-- SLIDER IMAGES -->
         <div class="slider">
-
-            <img src="../assets/images/im1.png" class="slide active" alt="">
-            <img src="../assets/images/im2.png" class="slide" alt="">
-            <img src="../assets/images/hold1.webp" class="slide" alt="">
-            <img src="../assets/images/hold3.jpg" class="slide" alt="">
-            <img src="../assets/images/hol4.webp" class="slide" alt="">
-            <img src="../assets/images/acc.jpg" class="slide" alt="">
-
+            <img src="../assets/hold1.webp" alt="" class="slide active">
+            <img src="../assets/im1.png" alt="" class="slide">
+            <img src="../assets/im2.png" alt="" class="slide">
+            <img src="../assets/hold2.avif" alt="" class="slide ">
+            <img src="../assets/hold3.jpg" alt="" class="slide ">
+            <img src="../assets/acc.jpg" alt="" class="slide">
+            <img src="../assets/hold5.jpg" alt="" class="slide">
+            <img src="../assets/acc4.jpg" alt="" class="slide">
+            <img src="../assets/hold6.jpg" alt="" class="slide">
+            <img src="../assets/hol4.webp" alt="" class="slide">
+            <img src="../assets/acc.jpg" alt="" class="slide">
         </div>
 
         <!-- DARK OVERLAY -->
@@ -87,15 +90,18 @@
             </p>
 
             <button class="report-btn">
-
                 <img src="../assets/images/warning.png" alt="">
-                Report an Incident
-
+                <a href="report-incident.php">Report an Incident</a>
             </button>
 
             <!-- DOTS -->
             <div class="dots">
                 <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>

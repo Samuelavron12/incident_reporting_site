@@ -2,13 +2,71 @@
 <?php 
 include("../includes/user-header.php"); 
 ?>
+<?php
+require_once("../includes/user-check.php");
+?>
 
-<div class="content">
-    <h1>Live Traffic Jam Monitor</h1>
-    <p>Your current area traffic condition</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-    <div id="trafficMap"> </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Traffic Jam Monitor</title>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<link rel="stylesheet"
+href="../assets/CSS/traffic-jam.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="traffic-header">
+
+    <h1>Real-Time Traffic Monitor</h1>
+
+    <p>
+        Live traffic congestion monitoring and heatmap visualization
+    </p>
+
 </div>
+
+<!-- MAP -->
+
+<div id="trafficMap"></div>
+
+<!-- LEGEND -->
+
+<div class="traffic-legend">
+
+    <h3>Traffic Severity</h3>
+
+    <div class="legend-item">
+        <span class="green"></span>
+        Free Traffic
+    </div>
+
+    <div class="legend-item">
+        <span class="yellow"></span>
+        Moderate Traffic
+    </div>
+
+    <div class="legend-item">
+        <span class="red"></span>
+        Severe Traffic
+    </div>
+
+</div>
+
+<script src="../assets/JS/traffic-live.js"></script>
 <div class="route-box">
             <h2>Smart Traffic Route Finder</h2>
 
@@ -24,7 +82,7 @@ include("../includes/user-header.php");
 
 
 <!-- Leaflet -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script src="../assets/js/trafficmap.js"></script>

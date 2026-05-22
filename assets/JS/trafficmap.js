@@ -1,38 +1,101 @@
-// ===== TOMTOM API KEY =====
-const API_KEY = "2o0TDIeWMU9xtjnCbjrPVVDeydMx3Nwl";
 
-let map = L.map('trafficMap').setView([6.5244, 3.3792], 13);
-let userLat, userLng;
-let routeLayer;
-let destinationMarker;
+// ================= MAP =================
 
-// Base map
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var map = L.map('trafficMap').setView([6.5244, 3.3792], 13);
+
+// ================= STREET MAP =================
+
+var streetLayer = L.tileLayer(
+'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+{
     attribution:'© OpenStreetMap'
-}).addTo(map);
-
-// ===== REAL TRAFFIC LAYER =====
-const trafficLayer = L.tileLayer(
-`https://api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.png?key=${API_KEY}`,
-{ opacity:0.7 }
+}
 ).addTo(map);
 
-// Auto refresh traffic every 5 mins
-setInterval(() => {
-    trafficLayer.setUrl(
-    `https://api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.png?key=${API_KEY}&t=${Date.now()}`
+// ================= SATELLITE VIEW =================
+
+var satelliteLayer = L.tileLayer(
+'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+{
+    attribution:'Tiles © Esri'
+}
+);
+
+// ================= REAL-TIME TRAFFIC =================
+
+// API key bolock
+const apiKey = "2o0TDIeWMU9xtjnCbjrPVVDeydMx3Nwl";
+
+// Traffic flow layer
+var trafficFlow = L.tileLayer(
+
+`https://api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.png?key=${apiKey}`,
+
+{
+    attribution:'TomTom Traffic',
+    opacity:0.7
+}
+
+).addTo(map);
+
+// ================= LAYER CONTROL =================
+
+L.control.layers({
+
+    "Street View": streetLayer,
+    "Satellite View": satelliteLayer
+
+},
+{
+    "Live Traffic": trafficFlow
+}).addTo(map);
+
+// ================= USER LOCATION =================
+
+navigator.geolocation.getCurrentPosition(
+
+    function(position){
+
+        let lat = position.coords.latitude;
+        let lng = position.coords.longitude;
+
+        map.setView([lat,lng], 14);
+
+        L.marker([lat,lng])
+        .addTo(map)
+        .bindPopup("You are here")
+        .openPopup();
+
+    },
+
+    function(error){
+
+        alert("Location access denied.");
+
+    },
+
+    {
+        enableHighAccuracy:true,
+        timeout:15000,
+        maximumAge:0
+    }
+
+);
+
+// ================= AUTO REFRESH =================
+
+// refresh traffic every 2 minutes
+setInterval(function(){
+
+    trafficFlow.setUrl(
+
+`https://api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.png?key=${apiKey}&t=${new Date().getTime()}`
+
     );
-}, 300000);
 
-// ===== GET USER LOCATION =====
-navigator.geolocation.getCurrentPosition(pos=>{
-    userLat = pos.coords.latitude;
-    userLng = pos.coords.longitude;
+    console.log("Traffic updated");
 
-    map.setView([userLat,userLng],15);
-    L.marker([userLat,userLng]).addTo(map)
-      .bindPopup("You are here").openPopup();
-});
+}, 120000);
 
 // ===== CLICK MAP TO CHOOSE DESTINATION =====
 map.on("click", function(e){
@@ -92,36 +155,3 @@ async function getRoute(destLat, destLng){
     document.getElementById("routeInfo").innerHTML =
         `ETA: ${timeMin} mins | Distance: ${distKm} km`;
 }
-
-/* CREATE MAP 
-let map = L.map('trafficMap').setView([6.5244, 3.3792], 13);
-
-/* 🗺️ STREET MAP */
-let street = L.tileLayer(
- 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
- { attribution:'© OpenStreetMap contributors' }
-);
-
-/* 🛰️ SATELLITE MAP */
-let satellite = L.tileLayer(
- 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
- { attribution:'Tiles © Esri' }
-);
-
-/* 🌍 TERRAIN MAP */
-let terrain = L.tileLayer(
- 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
- { attribution:'© OpenTopoMap contributors' }
-);
-
-/* Add default map */
-street.addTo(map);
-
-/* 🎛️ Map Layer Switcher */
-let baseMaps = {
-    "Street View": street,
-    "Satellite View": satellite,
-    "Terrain View": terrain
-};
-
-L.control.layers(baseMaps).addTo(map);

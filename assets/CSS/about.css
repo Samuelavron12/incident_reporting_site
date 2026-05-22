@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    width:100%;
+    height:60px;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+}
+
+.logo-text h2{
+    color:#000;
+    font-size:25px;
+    font-weight: bold;
+}
+
+.logo-text p{
+    color:#1faa59;
+    font-size:18px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items: center;
+}
+
+   
+.nav-links a{
+    text-decoration:none;
+    color:#0d1b4c;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:18px;
+    font-weight: bold;
+    padding:12px 18px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    background:#ace4c1;
+}
+
+.nav-links a.active{
+    background:#dff5e3;
+}
+
+.nav-links a img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+}
+
+
+/* TOGGLE */
+.menu-toggle{
+    display:none;
+    cursor:pointer;
+}
+
+.menu-toggle img{
+    width:35px;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    padding:140px 80px 80px;
+}
+
+/* LEFT */
+.about-content{
+    flex:1;
+}
+
+.about-content h1{
+    font-size:40px;
+    font-weight: bold;
+    color:#000;
+    margin-bottom:25px;
+}
+
+.about-content p{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:20px;
+    color:#000;
+}
+
+/* AUTHOR BOX */
+
+.author-box{
+    margin-top:35px;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    border-left:6px solid #1faa59;
+}
+
+.author-box h2{
+    margin-bottom:25px;
+    color:#000;
+    font-weight: bold;
+}
+
+.info-item{
+    margin-bottom:18px;
+}
+
+.label{
+    font-weight:bold;
+    font-size: 17px;
+    font-family: Times New Roman;
+    color:#1faa59;
+    display:block;
+    margin-bottom:5px;
+
+}
+
+.value{
+    color:#000;
+    font-size:18px;
+    font-family: Times New Roman;
+    font-weight: bold;
+}
+
+/* RIGHT IMAGE */
+
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:550px;
+    border-radius:25px;
+    height: 600px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    object-fit:cover;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:991px){
+
+    .about-section{
+        flex-direction:column-reverse;
+        padding:120px 30px 50px;
+    }
+
+    .about-content h1{
+        font-size:38px;
+        text-align:center;
+    }
+
+    .about-content p{
+        text-align:center;
+    }
+
+    .author-box{
+        margin-top:25px;
+    }
+
+    .about-image img{
+        max-width:100%;
+    }
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+    .nav-links{
+        position:absolute;
+        top:100px;
+        right:-100%;
+        width:300px;
+        background:#fff;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.15);
+        transition:0.4s;
+    }
+    .nav-links.show{
+        right:20px;
+    }
+
+    .nav-links a{
+        padding:12px 0;
+       
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+    .nav-links a{
+        color:#000;
+        text-decoration:none;
+        font-size:15px;
+        padding:12px 18px;
+        border-radius:12px;
+        transition:0.3s;
+        transition:0.3s;
+    }
+    .nav-links a:hover{
+        background:#ace4c1;
+    }
+}
