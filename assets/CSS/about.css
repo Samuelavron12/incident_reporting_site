@@ -110,6 +110,9 @@ body{
 /* LEFT */
 .about-content{
     flex:1;
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px;
 }
 
 .about-content h1{
@@ -130,13 +133,14 @@ body{
 
 .author-box{
     margin-top:35px;
+    width: 500px;
+    height: 350px;
     background:white;
     padding:30px;
     border-radius:18px;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
     border-left:6px solid #1faa59;
 }
-
 .author-box h2{
     margin-bottom:25px;
     color:#000;
@@ -181,6 +185,8 @@ body{
     object-fit:cover;
 }
 
+
+
 /* ================= MOBILE ================= */
 
 @media(max-width:991px){
@@ -201,6 +207,8 @@ body{
 
     .author-box{
         margin-top:25px;
+        width: 300px;
+        height: 410px;
     }
 
     .about-image img{

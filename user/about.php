@@ -66,15 +66,11 @@
 
 </header>
 
-<!-- ================= ABOUT SECTION ================= -->
+<!-- ================= ABOUT SECTION ================= ---->
 
 <section class="about-section">
-
-    <!-- LEFT CONTENT -->
     <div class="about-content">
-
         <h1>About The System</h1>
-
         <p>
             The Smart Traffic Incident Reporting System is a web-based
             platform developed to improve traffic incident reporting,
@@ -83,7 +79,6 @@
             traffic congestion, broken traffic lights,
             road blockages, and other emergencies in real time.
         </p>
-
         <p>
             This platform integrates interactive maps,
             live traffic monitoring, notification systems,
@@ -92,37 +87,31 @@
             traffic authorities, hospitals, police stations,
             and fire service agencies.
         </p>
-
         <p>
             The system is designed to improve road safety,
             reduce emergency response delays,
             and provide valuable traffic data for
             decision-making and traffic management.
         </p>
-
+    
         <div class="author-box">
-
             <h2>Project Information</h2>
-
             <div class="info-item">
                 <span class="label">Project Title:</span>
                 <span class="value">
                     Smart Traffic Incident Reporting & Analytics System
                 </span>
             </div>
-
             <div class="info-item">
                 <span class="label">Developed By:</span>
                 <span class="value">Folorunsho Samuel Saiki</span>
             </div>
-
             <div class="info-item">
                 <span class="label">Role:</span>
                 <span class="value">
                     System Analyst, Programmer & Developer
                 </span>
             </div>
-
             <div class="info-item">
                 <span class="label">Supervisor:</span>
                 <span class="value">Dr. N. H Okwu</span>
@@ -131,8 +120,9 @@
         </div>
 
     </div>
+    
 
-    <!-- RIGHT IMAGE -->
+    
     <div class="about-image">
 
         <img src="../assets/hold6.jpg" alt="Traffic System">
@@ -140,7 +130,6 @@
     </div>
 
 </section>
-
 <!-- ================= JS ================= -->
 
 <script>
