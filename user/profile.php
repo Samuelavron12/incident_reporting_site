@@ -38,7 +38,7 @@ if(isset($_POST['save_avatar']))
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR  -->
 
 <header class="navbar">
 
@@ -75,7 +75,7 @@ if(isset($_POST['save_avatar']))
 
 </header>
 
-<!-- ================= PROFILE SECTION ================= -->
+<!-- PROFILE SECTION  -->
 
 <section class="profile-section">
 
@@ -110,7 +110,7 @@ if(isset($_POST['save_avatar']))
 
 </section>
 
-<!-- ================= JS ================= -->
+<!--  JS  -->
 
 <script>
 

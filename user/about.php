@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!--  NAVBAR  -->
 <header class="navbar">
 
     <div class="logo-section">
@@ -49,24 +49,12 @@
                 <img src="../assets/images/prof.png" alt="">
                 profile
             </a>
-<!----
-        <a href="report-incident.php">
-            Report Incident
-        </a>
-
-        <a href="my-reports.php">
-            My Reports
-        </a>
-
-        <a href="profile.php">
-            Profile
-        </a>----->
 
     </nav>
 
 </header>
 
-<!-- ================= ABOUT SECTION ================= ---->
+<!--  ABOUT SECTION  ---->
 
 <section class="about-section">
     <div class="about-content">
@@ -130,7 +118,7 @@
     </div>
 
 </section>
-<!-- ================= JS ================= -->
+<!-- JS -->
 
 <script>
 

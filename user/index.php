@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!--  NAVBAR  -->
     <header class="navbar">
 
         <div class="logo-section">
@@ -54,7 +54,7 @@
 
     </header>
 
-    <!-- ================= HERO SECTION ================= -->
+    <!--  HERO SECTION  -->
     <section class="hero">
 
         <!-- SLIDER IMAGES -->
@@ -124,7 +124,6 @@
 
                 </div>
 
-               <!------- <a href="#">See All</a>   -------->
 
             </div>
 
@@ -184,7 +183,7 @@
 
     </section>
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- JAVASCRIPT  -->
     <script>
 
         // MOBILE MENU
